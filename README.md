@@ -1,5 +1,5 @@
 # Simple Music REST API
-## This project is a simple music rest api where you can upload musics and download musics.
+## This project is a simple music rest api where you can upload and download musics.
 
 ## Class Diagram (UML)
 <img  src="https://firebasestorage.googleapis.com/v0/b/storage-de-imagens-e99e4.appspot.com/o/uml2.png?alt=media&token=b5f67707-ec69-4a85-a112-59c63d0d3798" />
