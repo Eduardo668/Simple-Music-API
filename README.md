@@ -21,7 +21,7 @@
 * ## Search musics by author
   <img src="https://firebasestorage.googleapis.com/v0/b/storage-de-imagens-e99e4.appspot.com/o/author.png?alt=media&token=5208a5da-26f6-4ad0-b07e-e88a1de78fb5" />
 * ## Edit a music
-  <img src="	https://firebasestorage.googleapis.com/v0/b/storage-de-imagens-e99e4.appspot.com/o/edit.png?alt=media&token=7ea2d333-20b6-4b94-872b-e7002310cee0" />
+  <img src="https://firebasestorage.googleapis.com/v0/b/storage-de-imagens-e99e4.appspot.com/o/edit.png?alt=media&token=7ea2d333-20b6-4b94-872b-e7002310cee0" />
 * ## Delete a music
   <img src="https://firebasestorage.googleapis.com/v0/b/storage-de-imagens-e99e4.appspot.com/o/delete.png?alt=media&token=341a29d1-3b71-4b21-9a72-743b189e5610" />
 
