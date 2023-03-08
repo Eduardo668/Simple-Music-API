@@ -6,7 +6,9 @@ import br.com.musicapi.service.music_service.edit_music_strategy.EditMusicWithou
 import br.com.musicapi.service.music_service.edit_music_strategy.EditMusicWithoutMusicPath;
 import br.com.musicapi.service.music_service.edit_music_strategy.EditMusicWithoutName;
 import br.com.musicapi.service.music_service.edit_music_strategy.EditMusicWithoutType;
+import lombok.NoArgsConstructor;
 import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.FileSystemResource;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
@@ -24,10 +26,14 @@ import java.util.Optional;
 @RequiredArgsConstructor
 public class MusicServiceImpl implements MusicService {
     private final MusicRepository musicRepository;
-    private final EditMusicWithoutName editMusicWithoutName;
-    private final EditMusicWithoutAuthor editMusicWithoutAuthor;
-    private final EditMusicWithoutType editMusicWithoutType;
-    private final EditMusicWithoutMusicPath editMusicWithoutMusicPath;
+    @Autowired
+    private EditMusicWithoutName editMusicWithoutName;
+    @Autowired
+    private EditMusicWithoutAuthor editMusicWithoutAuthor;
+    @Autowired
+    private EditMusicWithoutType editMusicWithoutType;
+    @Autowired
+    private EditMusicWithoutMusicPath editMusicWithoutMusicPath;
 
     private Path currentDir = Paths.get("").toAbsolutePath();
     private String fileSystemDir = currentDir.normalize().toString();
@@ -55,8 +61,12 @@ public class MusicServiceImpl implements MusicService {
             if (musicData.isEmpty()){
                 throw new RuntimeException("This music doenst exists!");
             }
-            Path musicPath = Paths.get(musicData.get().getMusicPath());
-            Files.delete(musicPath);
+
+            if (musicData.get().getMusicPath() != null){
+                Path musicPath = Paths.get(musicData.get().getMusicPath());
+                Files.delete(musicPath);
+            }
+
             musicRepository.delete(musicData.get());
         } catch (Exception error){
             throw new RuntimeException("An error occurred while trying to delete a music: ", error);
