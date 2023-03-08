@@ -1,5 +1,6 @@
 # Simple Music REST API
-## This project is a simple music rest api where you can upload and download musics, for run this project download docker and use the command docker-compose up -d in the root directory
+## This project is a simple music rest api where you can upload and download musics. 
+## For run this project download docker and use the command docker-compose up -d in the root directory
 
 ## Class Diagram (UML)
 <img  src="https://firebasestorage.googleapis.com/v0/b/storage-de-imagens-e99e4.appspot.com/o/uml2.png?alt=media&token=b5f67707-ec69-4a85-a112-59c63d0d3798" />
